@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Training_CS2
@@ -52,7 +53,23 @@ namespace Training_CS2
 
                 if (userCredentials.ContainsKey(username) && userCredentials[username] == password)
                 {
-                    MessageBox.Show($"Welcome, {username}! You are verified.", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    string logFolderName = "LoginLogs";
+                    string projectDirectory = Application.StartupPath;
+                    string logFolderPath = Path.Combine(projectDirectory, logFolderName);
+
+                    Directory.CreateDirectory(logFolderPath);
+
+                    string fileName = username + "_login_log.txt";
+                    string filePath = Path.Combine(logFolderPath, fileName);
+                    string logContent = $"User '{username}' logged in on: {DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")}\n";
+                    
+                    try { 
+                        File.AppendAllText(filePath, logContent);
+                        MessageBox.Show($"A log file has been created on your desktop: { fileName}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex) { MessageBox.Show("An unexpected error occurred: " + ex.Message, "System Error", MessageBoxButtons.OK, MessageBoxIcon.Stop); }
+
+                    MessageBox.Show($"Login successful.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {

@@ -39,7 +39,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.GrayText;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(128, 135);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(97, 22);
@@ -50,7 +52,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.GrayText;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(131, 179);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 22);
@@ -59,7 +63,9 @@
             // 
             // usernameTextBox
             // 
+            this.usernameTextBox.BackColor = System.Drawing.SystemColors.InfoText;
             this.usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.usernameTextBox.ForeColor = System.Drawing.SystemColors.Window;
             this.usernameTextBox.Location = new System.Drawing.Point(236, 134);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(183, 26);
@@ -68,7 +74,9 @@
             // 
             // passwordTextBox
             // 
+            this.passwordTextBox.BackColor = System.Drawing.SystemColors.InfoText;
             this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.passwordTextBox.ForeColor = System.Drawing.SystemColors.Window;
             this.passwordTextBox.Location = new System.Drawing.Point(236, 178);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
@@ -78,6 +86,7 @@
             // 
             // loginButton
             // 
+            this.loginButton.BackColor = System.Drawing.SystemColors.MenuBar;
             this.loginButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.loginButton.Location = new System.Drawing.Point(206, 236);
@@ -85,14 +94,14 @@
             this.loginButton.Size = new System.Drawing.Size(85, 28);
             this.loginButton.TabIndex = 4;
             this.loginButton.Text = "Login";
-            this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.BackgroundImage = global::Training_CS2.Properties.Resources._1_Euagv75V1mQxIkBz5RJYzA;
             this.ClientSize = new System.Drawing.Size(900, 484);
             this.Controls.Add(this.loginButton);
